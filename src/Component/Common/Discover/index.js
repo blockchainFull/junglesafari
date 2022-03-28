@@ -27,23 +27,12 @@ function Discover({
                     Become a Tribe member of Jungle Safari
                 </p>
                 
-                <div className='spin-price'>
-                  <img src='assets/img/symbol/minus.png' className='minus' onClick={() => setMintCount(-1)} alt='minus'/>
-                  <span className='spin-value'>
-                  {mintCount}
-                  </span>
-                  <img src='assets/img/symbol/plus.png' className='plus' onClick={() => setMintCount(1)} alt='plus'/>
-                </div>
+                
                 <div>
-                <p className='current-price'>
-                  <span>Mint price&nbsp;</span>  {1 * mintCount} MATIC
-                </p>
-                <p className='minted-price'>
-                   <span>Total Minted&nbsp;</span> {totalSupply}/3333
-                </p>
+                
                 <div className='mint-btn'>
                     <Button 
-                        text={mintingStatus ? 'Minting...' : 'Mint'} 
+                        text={'JOIN OUR DISCORD'} 
                         onClick = {
                             () => {
                                 !mintingStatus && onMint()
@@ -54,9 +43,7 @@ function Discover({
                         }
                     />
                 </div>
-                <p className='max-price'>
-                    <span>MAX PER WALLET&nbsp;</span> 3
-                </p>
+                
                 </div>
             </div>
             <div

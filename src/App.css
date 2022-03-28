@@ -5,7 +5,9 @@
 }
 
 .minting {
-  background: #170724;
+  background-image: url("./back.png") !important;
+  background-attachment: fixed;
+  /* background: #170724; */
   background-size: cover;
   z-index: -3;
 }

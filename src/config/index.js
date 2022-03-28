@@ -88,7 +88,6 @@ export const faqs_content = [
     }
 ]
 
-
 export const mambers = [
   {
       img: 'assets/img/member/file14.jpg',

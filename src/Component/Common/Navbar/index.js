@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { Element, scroller, animateScroll as scroll } from 'react-scroll';
+import { Link } from "react-router-dom";
 
 import {
     navbars_left,
@@ -32,14 +33,18 @@ function Navbar({ onClickConnectWallet, onClickDisconnectWallet, walletAddress }
             </div>
             <div className="navbar-group right">
             {
-              navbars_right.map((navbar, key) =>
+             /*  navbars_right.map((navbar, key) =>
               <a href={navbar.link} target="_blank">
                 <img src={navbar.img} key={key} alt='navbar'/>
               </a>
-              )
+              ) */
             }
             
             </div>
+           <Link to="mint" target='_blank' style={{position: 'absolute', right: '8em'}}>
+            <button className='connect'      
+            ><span className="text">MINT</span></button>
+            </Link>
             <button 
                 className='connect'
                 role="button"
