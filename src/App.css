@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  font-family: 'UomoBold';
+  user-select: none;
+}
+
+.minting {
+  background: #170724;
+  background-size: cover;
+  z-index: -3;
+}
+
+.minting .Toastify *{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.minting .row {
+  display: flex;
+  flex-direction: row;
+}
+
+@font-face {
+  font-family: 'UomoBold';
+  src: url("./assets/font/uomoexpanded-bold.otf") format("opentype");
+}
+
+
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("./assets/font/Helvetica/helvetica_regular.otf") format("opentype");
+}
