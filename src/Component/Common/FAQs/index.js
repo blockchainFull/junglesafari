@@ -23,7 +23,7 @@ function FAQs() {
                     <div 
                         className='faqs-content-item aos-item' 
                         key={key}
-                        data-aos="flip-down"
+                        data-aos="fade-up"
                         data-aos-duration={500}
                     >
                         <Collapsible trigger={trigger(item.title)}>

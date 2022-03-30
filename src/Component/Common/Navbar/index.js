@@ -2,14 +2,11 @@
 import { Element, scroller, animateScroll as scroll } from 'react-scroll';
 import { Link } from "react-router-dom";
 
-import {
-    navbars_left,
-    navbars_right,
-} from '../../../config';
+import { navbars_left } from '../../../config';
 import './styles.scss'
 
 
-function Navbar({ onClickConnectWallet, onClickDisconnectWallet, walletAddress }) {
+function Navbar() {
     const goScroll = (dest) => {
         scroller.scrollTo(dest, {
             duration: 1000,
@@ -32,27 +29,19 @@ function Navbar({ onClickConnectWallet, onClickDisconnectWallet, walletAddress }
                 </div>
             </div>
             <div className="navbar-group right">
-            {
-             /*  navbars_right.map((navbar, key) =>
-              <a href={navbar.link} target="_blank">
-                <img src={navbar.img} key={key} alt='navbar'/>
-              </a>
-              ) */
-            }
-            
             </div>
-           <Link to="mint" target='_blank' style={{position: 'absolute', right: '8em'}}>
-            <button className='connect'      
-            ><span className="text">MINT</span></button>
+            <Link to="mint" target='_blank'>
+              <button className='connect'      
+              ><span className="text">MINT</span></button>
             </Link>
-            <button 
+            {/* <button 
                 className='connect'
                 role="button"
                 onClick = {
                 () => {
                     walletAddress ? onClickDisconnectWallet() : onClickConnectWallet(); 
                 }
-            }><span className="text">{walletAddress ? walletAddress.slice(0,3)+'...'+walletAddress.slice((walletAddress.length - 3), walletAddress.length) : 'Connect'}</span></button>
+            }><span className="text">{walletAddress ? walletAddress.slice(0,3)+'...'+walletAddress.slice((walletAddress.length - 3), walletAddress.length) : 'Connect'}</span></button> */}
         </div >
     );
 }

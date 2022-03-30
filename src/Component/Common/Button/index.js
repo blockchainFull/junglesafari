@@ -6,7 +6,7 @@ function Button({ text, className, ...props }) {
     return (
         <div className={'button'} {...props}>
             <div className="container">
-                <div className={classData}><a href='https://discord.gg/junglesafari' target='_blank'>{text}</a></div>
+                <div className={classData}><p style={{marginTop: '0px', cursor: 'pointer'}}>{text}</p></div>
             </div>
         </div>
     );

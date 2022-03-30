@@ -18,8 +18,7 @@ function Footer() {
                     }
                 </div>
                 <div className='footer-links-right'>
-                    <Button text='JOIN THE DISCORD COMMUNITY'>
-                    </Button>
+                    <a href='https://discord.gg/junglesafari' target='_blank'><Button text='JOIN THE DISCORD COMMUNITY' /></a>
                 </div>
             </div>
         </div>

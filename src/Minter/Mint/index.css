@@ -132,6 +132,7 @@
   line-height: 29px;
   margin-left: 5%;
   margin-right: 5%;
+  width: 1em;
 }
 
 .mint-amount {
@@ -178,7 +179,7 @@
   .top {
     color: #ffffff !important;
     font-size: 40px !important;
-    margin-top: 10% !important;
+    margin-top: 5% !important;
     margin-bottom: 15px !important;
     word-spacing: -5px !important;
   }
@@ -245,3 +246,7 @@
     /* margin: auto; */
   /* } */
 /* } */
+
+.Toastify__toast-container--top-right {
+  font-size: 12px !important;
+}

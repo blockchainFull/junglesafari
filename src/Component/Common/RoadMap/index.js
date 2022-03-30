@@ -26,7 +26,7 @@ function RoadMap() {
                                 roadmap-content-item-text 
                                 aos-item
                             '
-                            data-aos="fade-left"
+                            data-aos="fade-up"
                             data-aos-duration={500}
                         >
                             <p className='roadmap-content-item-title'>

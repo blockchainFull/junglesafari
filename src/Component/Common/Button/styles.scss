@@ -20,7 +20,7 @@
 
 
     
-    .container .btn a {
+    .container .btn p {
         position: absolute;
         text-align: center;
         top: 0;
@@ -47,7 +47,7 @@
 
     }
 
-    .container .btn.loading a {
+    .container .btn.loading p {
         cursor: not-allowed;
     }
 
@@ -67,11 +67,11 @@
         transition-delay: 0.5s;
     }
 
-    .container .btn:hover a {
+    .container .btn:hover p {
         letter-spacing: 3px;
     }
 
-    .container .btn a::before {
+    .container .btn p::before {
         content: '';
         position: absolute;
         top: 0;
@@ -84,7 +84,7 @@
         transition: 0.5s;
     }
 
-    .container .btn:hover a::before {
+    .container .btn:hover p::before {
         transform: skewX(45deg) translateX(200%);
     }
 

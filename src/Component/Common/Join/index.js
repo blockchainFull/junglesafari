@@ -23,7 +23,7 @@ function Join() {
                     </p>
                     <div className='join-right-btns'>
                         <div>
-                          <Button text={'JOIN OUR DISCORD'} />
+                          <a href='https://discord.gg/junglesafari' target='_blank'><Button text={'JOIN OUR DISCORD'} /></a>
                         </div>
                         {/* <div>
                         <Button text={'MORE DETAILS'} />
