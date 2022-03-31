@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import './styles.scss'
 import { footer_left } from '../../../config';
 import Button from '../Button';
@@ -11,8 +12,8 @@ function Footer() {
                 <div className='footer-links-left'>
                     {
                         footer_left.map((item, key) =>
-                          <a href={item.link} target='_blank'>
-                            <img src={item.img} key={key} alt='footer'/>
+                          <a href={item.link} key={key} target='_blank'>
+                            <img src={item.img}  alt='footer'/>
                           </a>
                         )
                     }
