@@ -7,7 +7,7 @@ import { connectWallet, getCurrentWalletConnected, getContract } from '../../uti
 import { chainId } from 'constants/address';
 import { whiteList } from 'constants/whitelist';
 
-import ToastContainer from '../../Container/ToastContainer'
+import MyToastContainer from '../../Container/ToastContainer';
 import { toast } from 'react-toastify'
 
 import { BigNumber } from 'ethers';
@@ -21,7 +21,7 @@ export default function Mint() {
   const [loading, setMintLoading] = useState(false)
   const [totalSupply, setTotalSupply] = useState(0)
   const [numberOfWallet, setNumberOfWallet] = useState(0)
-  const [presale, setPresale] = useState(false)
+  const [presale, setPresale] = useState(null)
   const [price, setPrice] = useState(0)
   const [whiteListAddress, setWhiteListAddress] = useState(null)
 
@@ -150,21 +150,21 @@ export default function Mint() {
     setWhiteListAddress(whitelist)
   }, [])
 
-  useEffect(() => {
+  useEffect(async () => {
     if (status) {
       notify()
       setStatus(null)
     }
-  }, [status])
+  }, [status, presale])
 
-  useEffect(async () => {
+  {/* useEffect(async () => {
     let contract = getContract()
-    await contract.PresaleStatus().then(res =>{
-      console.log(res)
+    await contract.presale().then(res =>{
+      console.log(presale)
       setPresale(res)
     })
     setPrice(presale ? 6 : 7)
-  }, [presale])
+  }, [presale]) */}
 
   useEffect( async () => {
     if(!loading && walletAddress) {
@@ -173,10 +173,15 @@ export default function Mint() {
       setTotalSupply(BigNumber.from(res).toString())
       let numofwallet = await contract.numberOfwallets(walletAddress)
       setNumberOfWallet(BigNumber.from(numofwallet).toString())
+      await contract.presale().then(res =>{
+        console.log(presale)
+        setPresale(res)
+      })
+      setPrice(presale ? 6 : 7)
     }
   }, [loading, walletAddress] )  
 
-  
+  console.log(presale)
   return(
     <div style={{flex: 1, display:'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
       <div>
@@ -189,7 +194,7 @@ export default function Mint() {
         <div style={{ paddingTop: '20px', textAlign: 'center' }}>
          
             <>
-            <h1 className='mint-amount'>{presale ? 'Presale is Live' : 'Public sale is Live'}</h1>
+            <h1 className='mint-amount'>{walletAddress &&( presale ? 'Presale is Live' : 'Public sale is Live')}</h1>
             <h1 className='mint-amount'>Total Minted {totalSupply}/3333</h1>
             <h6 className='mint-price'>Total Price: {(count * (presale ? 0.006 : 0.007)).toFixed(3)} MATIC</h6>
               <div className='div-counter'>
@@ -219,7 +224,7 @@ export default function Mint() {
           />}
         </div>
       </div>
-      <ToastContainer />
+      <MyToastContainer />
     </div>
   )
 }

@@ -90,32 +90,32 @@ export const faqs_content = [
 
 export const mambers = [
   {
-      img: 'assets/img/member/file14.jpg',
+      img: 'assets/img/member/1.png',
       name: 'NIK',
       role: 'Project Lead',
   },
   {
-      img: 'assets/img/member/file14.jpg',
+      img: 'assets/img/member/5.png',
       name: 'Garena',
       role: 'CFO',
   },
   {
-      img: 'assets/img/member/file14.jpg',
+      img: 'assets/img/member/3.png',
       name: 'Albus.NFT',
       role: 'Marketing & Outreach',
   },
   {
-    img: 'assets/img/member/file14.jpg',
+    img: 'assets/img/member/4.png',
     name: 'eemceee',
     role: 'Artwork & illustrations',
   },
   {
-      img: 'assets/img/member/file14.jpg',
+      img: 'assets/img/member/2.png',
       name: 'Potoelite',
       role: 'Website developer',
   },
   {
-      img: 'assets/img/member/file14.jpg',
+      img: 'assets/img/member/1.png',
       name: 'Jatin',
       role: 'Social Media Manager',
   }

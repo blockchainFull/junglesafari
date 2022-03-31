@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import './Slider.scss';
 
 /* slide Image settings */
-const imageCount = 13;
+const imageCount = 5;
 const images = require.context('../../../assets/img/member', true);
 const slideImages = [];
 
 for (let i = 1; i <= imageCount; i++) {
-    const image = images(`./file14.jpg`);
+    const image = images(`./${i}.png`);
     slideImages.push(image);
 }
 /**********************/

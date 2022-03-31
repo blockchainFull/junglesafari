@@ -12,7 +12,6 @@ import Filter from 'Component/Common/Filter'
 
 import {animation_delay} from '../config';
 import NavbarContainer from 'Container/NavbarContainer'
-import ToastContainer from 'Container/ToastContainer';
 import DiscoverContainer from 'Container/DiscoverContainer'
 
 function Index() {
@@ -62,7 +61,6 @@ function Index() {
               {<Filter style={{background: '#6E2B34', left: '-25vw', bottom: 0}}/>}
               <Footer />
           </div>
-          <ToastContainer />
       </div>
   )
 }

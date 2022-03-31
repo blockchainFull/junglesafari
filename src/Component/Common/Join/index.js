@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import Button from '../Button'
 import './styles.scss'
 
@@ -5,11 +6,11 @@ function Join() {
     return (
         <>
             <div className="left">
-                {/* <img
-                    src='/assets/img/member/join.jpg'
+                <img
+                    src='/assets/img/member/2.png'
                     className='image'
                     alt='join'
-                /> */}
+                />
             </div>
             <div
                 className="right"

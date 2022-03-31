@@ -37,11 +37,11 @@ function Discover() {
                 data-aos-duration={animation_delay}
             >
                 <Filter style={{background: '#54136F', left: 0, bottom: 0}}/>
-                {/* <img
-                    src='assets/img/member/'
+                <img
+                    src='assets/img/member/1.png'
                     className='image'
                     alt='discover'
-                /> */}
+                />
             </div>
         </>
     );
